@@ -6,18 +6,17 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="Animal Fun" />
-    <!-- Fixed: change /manifest.json to ./manifest.json -->
     <link rel="manifest" href="./manifest.json" />
     <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23fde047'/><text y='.85em' x='5' font-size='80'>🦁</text></svg>" />
     <title>Animal Feeding Fun</title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <!-- Fixed: changed /src/main.tsx to ./src/main.tsx -->
+    <script type="module" src="./src/main.tsx"></script>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          /* Fixed: change /sw.js to ./sw.js */
           navigator.serviceWorker.register('./sw.js').then((reg) => {
             console.log('SW registered for offline playback:', reg.scope);
           }).catch((err) => {

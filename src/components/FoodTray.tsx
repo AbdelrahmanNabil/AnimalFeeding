@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion, PanInfo } from 'motion/react';
 import { Food, Animal, DoctorTool } from '../types';
 import { FoodItem } from './FoodItem';
-import { DoctorToolItem } from './DoctorToolItem';
 import { FOODS } from '../data/animalsAndFoods';
 import { DOCTOR_TOOLS } from '../data/doctorTools';
 

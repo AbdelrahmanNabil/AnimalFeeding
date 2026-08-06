@@ -1,0 +1,6 @@
+{
+  "name": "Animal Feeding Fun",
+  "description": "A fun and simple interactive Animal Feeding game for kids with drag-and-drop snacks, animal sounds, happy chewing animations, and sticker rewards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

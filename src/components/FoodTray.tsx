@@ -135,13 +135,22 @@ export const FoodTray: React.FC<FoodTrayProps> = ({
           <div className="grid grid-cols-3 sm:grid-cols-5 gap-3">
             {DOCTOR_TOOLS.map((tool) => (
               <motion.div key={tool.id} layout>
-                <DoctorToolItem
-                  tool={tool}
+                <motion.div
+                  drag
+                  dragSnapToOrigin
                   onDragStart={onDragStart}
                   onDrag={(e, info) => onDragDoctorTool(tool, e, info)}
                   onDragEnd={(e, info) => onDragEndDoctorTool(tool, e, info)}
-                  onTapToUse={() => onTapUseDoctorTool(tool)}
-                />
+                  onClick={() => onTapUseDoctorTool(tool)}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-rose-50 border-2 border-rose-200 rounded-2xl p-3 flex flex-col items-center justify-center cursor-grab active:cursor-grabbing shadow-[0_4px_0_#FECDD3] hover:bg-rose-100 transition-colors"
+                >
+                  <span className="text-3xl sm:text-4xl mb-1">{tool.icon}</span>
+                  <span className="text-xs font-black text-rose-900 tracking-tight text-center uppercase">
+                    {tool.name}
+                  </span>
+                </motion.div>
               </motion.div>
             ))}
           </div>
@@ -150,4 +159,3 @@ export const FoodTray: React.FC<FoodTrayProps> = ({
     </div>
   );
 };
-

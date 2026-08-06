@@ -5,6 +5,9 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // Set base path for GitHub Pages deployment
+    // Replace 'your-repository-name' with your actual GitHub repo name
+    base: '/AnimalFeeding/', 
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
